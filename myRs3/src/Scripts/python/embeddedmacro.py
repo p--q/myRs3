@@ -1,6 +1,8 @@
 #!/opt/libreoffice6.4/program/python
 # -*- coding: utf-8 -*-
-
+def macro(documentevent=None):  # 引数は文書のイベント駆動用。  
+	doc = XSCRIPTCONTEXT.getDocument() if documentevent is None else documentevent.Source  # ドキュメントのモデルを取得。 
+	ctx = XSCRIPTCONTEXT.getComponentContext()  # コンポーネントコンテクストの取得。
 
 
 
